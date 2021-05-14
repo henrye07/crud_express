@@ -1,0 +1,16 @@
+
+        <h1>INICIO</h1>
+        <a href="/create" class="btn btn-primary my-3" >Create</a>
+
+        <ul class="d-flex align-items-center justify-content-center list-group">
+            {{#each results}}
+            <li class="my-3 list-group-item px-5">
+                <a href="/show/{{id}}" class="me-5 text-decoration-none">
+                    {{titulo}}
+                </a>
+                <a href="/edit/{{id}}" class="btn-sm btn-success ms-5 mx-auto text-decoration-none">Editar</a>
+                <a href="/destroy/{{id}}" class="btn-sm btn-danger mx-auto text-decoration-none">Delete</a>
+            </li>
+            {{/each }}
+        </ul>
+    
