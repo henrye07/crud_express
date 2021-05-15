@@ -5,10 +5,15 @@ const exphbs = require('express-handlebars')
 const session = require("express-session")
 const flash = require('express-flash');
 const passport = require('passport');
+const fileUpload = require('express-fileupload')
+
 
 require('./passport');
 // ------------------CONSTANT------------------------
 const port= process.env.PORT || 3000;
+// ------------------EXPRESS-FILEUPLOAD------------------------
+
+app.use(fileUpload())
 
 // ------------------EXPRESS-FLASH------------------------
 
@@ -34,6 +39,7 @@ app.set('view engine', '.hbs')
 
 app.use(require('./routes/index'))
 app.use(require('./routes/auth'))
+app.use(require('./routes/uploads'))
 
 app.listen(port, () => {
     console.log(`http://localhost:${port}`)
