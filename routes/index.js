@@ -2,6 +2,8 @@ const express = require('express');
 const router= express.Router();
 const moment = require('moment');
 const connection = require('../database');
+
+
 router.get('/', async (req,res) => {
     // connection.query('SELECT * FROM articulos', (error,results,fields)=>{
     //     if (error) throw error

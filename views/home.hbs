@@ -1,15 +1,13 @@
 
         <h1>INICIO</h1>
-        <a href="/create" class="btn btn-primary my-3" >Create</a>
+        <a href="/create" class="btn btn-primary my-3" >Crear Nuevo Articulo</a>
 
         <ul class="d-flex align-items-center justify-content-center list-group">
             {{#each results}}
-            <li class="my-3 list-group-item px-5">
-                <a href="/show/{{id}}" class="me-5 text-decoration-none">
-                    {{titulo}}
-                </a>
-                <a href="/edit/{{id}}" class="btn-sm btn-success ms-5 mx-auto text-decoration-none">Editar</a>
-                <a href="/destroy/{{id}}" class="btn-sm btn-danger mx-auto text-decoration-none">Delete</a>
+            <li class=" list-group-item px-5 w-100 fs-4 d-flex">
+                <a href="/show/{{id}}" class="text-decoration-none flex-grow-1">{{titulo}}</a>
+                <a href="/edit/{{id}}" class="btn-sm btn-success mx-1 text-decoration-none ">Editar</a>
+                <a href="/destroy/{{id}}" class="btn-sm btn-danger mx-1 text-decoration-none ">Eliminar</a>
             </li>
             {{/each }}
         </ul>
