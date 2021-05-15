@@ -4,9 +4,8 @@ const app= express()
 const exphbs = require('express-handlebars')
 const session = require("express-session")
 const flash = require('express-flash');
+const passport = require('passport');
 
-
-const passport = require('passport')
 require('./passport');
 // ------------------CONSTANT------------------------
 const port= process.env.PORT || 3000;

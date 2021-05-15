@@ -7,6 +7,15 @@
             </div>
         {{/if}}
 
+        {{#if errors}}
+            {{#each errors}}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{ msg }}</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {{/each}}
+        {{/if}}
+
         <form action="/signin" method="POST" >
                     <div class="form-group text-center my-4">
                         <label for="email" class="fs-4">Email</label>
